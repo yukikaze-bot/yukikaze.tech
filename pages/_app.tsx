@@ -4,9 +4,25 @@ import '../styles/normalize.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
+// G-56ZTZJYLND
+
 const App = ({ Component, pageProps }: AppProps) => (
     <>
         <Head>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=G-56ZTZJYLND`} />
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-56ZTZJYLND', {
+                            page_path: window.location.pathname,
+                        });
+                    `,
+                }}
+            />
+
             <title>Yoshida Tomio</title>
             <meta name="description" content="The personal website of Yoshida Tomio. https://github.com/1chiSensei" />
             <link rel="icon" href="/favicon.ico" />
