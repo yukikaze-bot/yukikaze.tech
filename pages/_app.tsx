@@ -4,8 +4,6 @@ import '../styles/normalize.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-// G-56ZTZJYLND
-
 const App = ({ Component, pageProps }: AppProps) => (
     <>
         <Head>
@@ -27,6 +25,7 @@ const App = ({ Component, pageProps }: AppProps) => (
             <meta name="description" content="The personal website of Yoshida Tomio. https://github.com/1chiSensei" />
             <link rel="icon" href="/favicon.ico" />
             <link rel="manifest" href="/manifest.json" />
+            <meta charSet="UTF-8" />
 
             <link rel="apple-touch-icon" href="/icons/apple-icon-180.png" />
 
@@ -173,12 +172,12 @@ landscape)"
                 media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
             />
             <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
             <meta name="theme-color" content="#4a4a4a" />
             <meta name="robots" content="index, follow" />
             <meta name="author" content="Yoshida Tomio" />
             <meta name="language" content="English" />
-            <meta content="/profile.jpg" property="og:image" />
+            <meta content="https://tomio.codes/profile.jpg" property="og:image" />
             <meta content="Yoshida Tomio" property="og:title" />
 
             <meta content="Yoshida Tomio's personal homepage." property="og:description" />
@@ -190,13 +189,13 @@ landscape)"
             <meta property="og:locale" content="en_US" />
             <link rel="canonical" href="https://tomio.codes/" />
             <meta property="og:url" content="https://tomio.codes/" />
-            <meta property="og:site_name" content="1chiSensei" />
+            <meta property="og:site_name" content="Yoshida Tomio" />
 
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content="https://tomio.codes/" />
             <meta property="twitter:title" content="Yoshida Tomio" />
             <meta property="twitter:description" content="Yoshida Tomio's personal homepage." />
-            <meta property="twitter:image" content="/profile.jpg" />
+            <meta property="twitter:image" content="https://tomio.codes/profile.jpg" />
         </Head>
 
         <Component {...pageProps} />
