@@ -9,6 +9,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 module.exports = withBundleAnalyzer(
     pwa({
         reactStrictMode: true,
+        target: 'serverless',
         pwa: {
             dest: 'public',
             runtimeCaching,
