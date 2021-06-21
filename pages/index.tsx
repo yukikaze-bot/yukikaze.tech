@@ -38,7 +38,7 @@ const Home = () => (
                         <div className="unset">
                             <h1 className="title monospace">Yukikaze</h1>
                             <p className="undertitle monospace">
-                                <Typist>
+                                <Typist cursor={{ blink: true }}>
                                     <i className="emoji animevibe"></i> A multipurpose bot.
                                 </Typist>
                             </p>
