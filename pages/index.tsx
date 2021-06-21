@@ -48,7 +48,7 @@ const Home = () => (
                         <a href="/github" className="btn github-dropshadow animation hover">
                             GitHub
                         </a>
-                        <a href="mailto:mail@tomio.codes" className="btn emerald-dropshadow animation hover">
+                        <a href="mailto:contact@yukikaze.tech" className="btn emerald-dropshadow animation hover">
                             Email
                         </a>
                     </div>
