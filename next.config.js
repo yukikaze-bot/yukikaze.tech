@@ -15,17 +15,5 @@ module.exports = withBundleAnalyzer(
             runtimeCaching,
         },
         webpack: (config) => config,
-        redirects: () => [
-            {
-                source: '/discord',
-                destination: 'https://discord.gg/zGvtAnGhdP',
-                permanent: false,
-            },
-            {
-                source: '/github',
-                destination: 'https://github.com/yukikaze-bot',
-                permanent: false,
-            },
-        ],
     }),
 );
