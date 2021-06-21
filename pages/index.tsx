@@ -5,6 +5,7 @@ import {
     DiscordEmbedField,
     DiscordEmbedFields,
 } from '@skyra/discord-components-react';
+import Typist from 'react-typist';
 import Script from 'next/script';
 import Link from 'next/link';
 
@@ -37,7 +38,9 @@ const Home = () => (
                         <div className="unset">
                             <h1 className="title monospace">Yukikaze</h1>
                             <p className="undertitle monospace">
-                                <i className="emoji animevibe"></i> A multipurpose bot.
+                                <Typist>
+                                    <i className="emoji animevibe"></i> A multipurpose bot.
+                                </Typist>
                             </p>
                         </div>
                     </section>
@@ -114,6 +117,50 @@ const Home = () => (
                                     <DiscordEmbedField fieldTitle="Village">leaf village</DiscordEmbedField>
                                     <DiscordEmbedField fieldTitle="Quotes">
                                         &#34;Until I become Hokage, I refuse to die!&#34;
+                                    </DiscordEmbedField>
+                                </DiscordEmbedFields>
+                            </DiscordEmbed>
+                        </DiscordMessage>
+                    </DiscordMessages>
+                    <h2>Search</h2>
+                    <DiscordMessages>
+                        <DiscordMessage author="Tomio" avatar="https://tomio.codes/profile.jpg">
+                            !y anime Demon Slayer
+                        </DiscordMessage>
+                        <DiscordMessage author="Yukikaze" avatar="/profile.png">
+                            <DiscordEmbed
+                                slot="embeds"
+                                color="#ff0000"
+                                embedTitle="Kimetsu no Yaiba"
+                                thumbnail="https://media.kitsu.io/anime/poster_images/41370/original.jpg?1597699092"
+                                image="https://media.kitsu.io/anime/cover_images/41370/original.jpg?1597701689"
+                            >
+                                It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for a
+                                living, finds his family slaughtered by a demon. To make matters worse, his younger
+                                sister Nezuko, the sole survivor, has been transformed into a demon herself. Though
+                                devastated by this grim reality, Tanjiro resolves to become a “demon slayer” so that he
+                                can turn his sister back into a human, and kill the demon that massacred his family.
+                                <br />
+                                (Source: Crunchyroll)
+                                <span slot="footer">Page 1 / 7</span>
+                                <DiscordEmbedFields slot="fields">
+                                    <DiscordEmbedField fieldTitle="Rating" inline>
+                                        R
+                                    </DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Status" inline>
+                                        Finished
+                                    </DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Average Rating" inline>
+                                        85.81%
+                                    </DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Episodes" inline>
+                                        26
+                                    </DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Favorites" inline>
+                                        2,030
+                                    </DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Season" inline>
+                                        Spring
                                     </DiscordEmbedField>
                                 </DiscordEmbedFields>
                             </DiscordEmbed>
