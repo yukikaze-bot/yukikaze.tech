@@ -120,28 +120,20 @@ a:hover {
     animation-direction: alternate;
 }
 
-.congablob {
-    background-image: url(/congablob.gif);
-}
-
-.blobbounce {
-    background-image: url(/blobbounce.gif);
-}
-
-.blobblewobble {
-    background-image: url(/blobblewobble.gif);
-}
-
-.blobglitch {
-    background-image: url(/blobglitch.gif);
-}
-
-.googlecat {
-    background-image: url(/googlecat.gif);
+.animevibe {
+    background-image: url(/animevibe.gif);
     vertical-align: -0.3em;
     height: 1.25em;
     width: 1.25em;
     background-size: 1.25em 1.25em;
+}
+
+.nezuko {
+    background-image: url(/nezuko.gif);
+}
+
+.gojo {
+    background-image: url(/gojo.gif);
 }
 
 @media (max-width: 550px) {

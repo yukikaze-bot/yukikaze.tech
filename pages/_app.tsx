@@ -7,22 +7,11 @@ import Head from 'next/head';
 const App = ({ Component, pageProps }: AppProps) => (
     <>
         <Head>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=G-56ZTZJYLND`} />
-            <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-56ZTZJYLND', {
-                            page_path: window.location.pathname,
-                        });
-                    `,
-                }}
+            <title>Yukikaze</title>
+            <meta
+                name="description"
+                content="The official website of the discord bot - Yukikaze. https://github.com/1chiSensei"
             />
-
-            <title>Yoshida Tomio</title>
-            <meta name="description" content="The personal website of Yoshida Tomio. https://github.com/1chiSensei" />
             <link rel="icon" href="/favicon.ico" />
             <link rel="manifest" href="/manifest.json" />
             <meta charSet="UTF-8" />
@@ -177,25 +166,25 @@ landscape)"
             <meta name="robots" content="index, follow" />
             <meta name="author" content="Yoshida Tomio" />
             <meta name="language" content="English" />
-            <meta content="https://tomio.codes/profile.jpg" property="og:image" />
+            <meta content="https://yukikaze.tech/profile.png" property="og:image" />
             <meta content="Yoshida Tomio" property="og:title" />
 
-            <meta content="Yoshida Tomio's personal homepage." property="og:description" />
-            <meta content="Yoshida Tomio's personal homepage." name="description" />
+            <meta content="Yukikaze's official website." property="og:description" />
+            <meta content="Yukikaze's official website." name="description" />
 
             <meta name="revisit-after" content="2 days" />
-            <meta name="keywords" content="1chi, 1chiSensei, Yoshida Tomio, Developer, Github" />
+            <meta name="keywords" content="Yukikaze, Discord, Bot, Github" />
 
             <meta property="og:locale" content="en_US" />
-            <link rel="canonical" href="https://tomio.codes/" />
-            <meta property="og:url" content="https://tomio.codes/" />
-            <meta property="og:site_name" content="Yoshida Tomio" />
+            <link rel="canonical" href="https://yukikaze.tech/" />
+            <meta property="og:url" content="https://yukikaze.tech/" />
+            <meta property="og:site_name" content="Yukikaze" />
 
             <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:url" content="https://tomio.codes/" />
-            <meta property="twitter:title" content="Yoshida Tomio" />
-            <meta property="twitter:description" content="Yoshida Tomio's personal homepage." />
-            <meta property="twitter:image" content="https://tomio.codes/profile.jpg" />
+            <meta property="twitter:url" content="https://yukikaze.tech/" />
+            <meta property="twitter:title" content="Yukikaze" />
+            <meta property="twitter:description" content="Yukikaze's official website." />
+            <meta property="twitter:image" content="https://yukikaze.tech/profile.jpg" />
         </Head>
 
         <Component {...pageProps} />

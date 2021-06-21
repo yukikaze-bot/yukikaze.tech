@@ -22,17 +22,7 @@ module.exports = withBundleAnalyzer(
             },
             {
                 source: '/github',
-                destination: 'https://github.com/1chiSensei',
-                permanent: false,
-            },
-            {
-                source: '/rest',
-                destination: 'https://api.tomio.codes',
-                permanent: false,
-            },
-            {
-                source: '/twitter',
-                destination: 'https://twitter.com/tomiocodes',
+                destination: 'https://github.com/yukikaze-bot',
                 permanent: false,
             },
         ],

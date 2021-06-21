@@ -1,3 +1,10 @@
+import {
+    DiscordMessages,
+    DiscordMessage,
+    DiscordEmbed,
+    DiscordEmbedField,
+    DiscordEmbedFields,
+} from '@skyra/discord-components-react';
 import Script from 'next/script';
 import Link from 'next/link';
 
@@ -20,12 +27,17 @@ const Home = () => (
                 <div className="container">
                     <section className="me unset">
                         <div className="avatar-container">
-                            <img src="/profile.jpg" draggable={false} className="image-title" alt="Avatar of Tomio" />
+                            <img
+                                src="/profile.png"
+                                draggable={false}
+                                className="image-title"
+                                alt="Avatar of Yukikaze"
+                            />
                         </div>
                         <div className="unset">
-                            <h1 className="title monospace">Yoshida Tomio</h1>
+                            <h1 className="title monospace">Yukikaze</h1>
                             <p className="undertitle monospace">
-                                <i className="emoji googlecat"></i> A weeb dev.
+                                <i className="emoji animevibe"></i> A multipurpose bot.
                             </p>
                         </div>
                     </section>
@@ -35,12 +47,6 @@ const Home = () => (
                         </a>
                         <a href="/github" className="btn github-dropshadow animation hover">
                             GitHub
-                        </a>
-                        <a href="/twitter" className="btn twitter-dropshadow animation hover">
-                            Twitter
-                        </a>
-                        <a href="/rest" className="btn lavender-dropshadow animation hover">
-                            Rest API
                         </a>
                         <a href="mailto:mail@tomio.codes" className="btn emerald-dropshadow animation hover">
                             Email
@@ -66,67 +72,53 @@ const Home = () => (
         <section className="container" id="information">
             <div className="box-container">
                 <h1 className="title turquoise-text">
-                    <i className="emoji blobbounce"></i> Information:
+                    <i className="emoji nezuko"></i> Information:
                 </h1>
                 <div className="info-container">
                     <p>
-                        Hello, my name is <span className="turquoise-text">Tomio</span>, but known as{' '}
-                        <span className="turquoise-text">1chiSensei</span> over the internet. I&#39;m a Developer that
-                        likes anime. Current coding languages I know well enough are{' '}
-                        <span className="turquoise-text">HTML, CSS, JavaScript, Python, TypeScript, SQL</span> and{' '}
-                        <span className="turquoise-text">SCSS</span>.
+                        Yukikaze is a multipurpose Discord bot made in{' '}
+                        <span className="turquoise-text">TypeScript</span> utilizing the{' '}
+                        <span className="turquoise-text">Sapphire</span> framework. It is a feature-rich bot.
                     </p>
                 </div>
             </div>
             <div className="box-container">
                 <h1 className="title turquoise-text">
-                    <i className="emoji blobblewobble"></i> Projects:
+                    <i className="emoji gojo"></i> Features:
                 </h1>
                 <div className="info-container">
-                    <p>
-                        <Link href="https://npm.im/@1chi/fml.js">fml.js</Link> a simple utility to get FML quotes.
-                    </p>
-                    <p>
-                        <Link href="https://github.com/Shukaaku/hello-world">hello-world</Link> &#34;Hello, World!&#34;
-                        in multiple languages.
-                    </p>
-                    <p>
-                        <Link href="https://npm.im/img-url-to-imgur">img-url-to-imgur</Link> easily upload image urls to
-                        imgur.
-                    </p>
-                    <p>
-                        <Link href="https://github.com/1chiSensei/OAuth">OAuth</Link> provides OAuth examples to several
-                        auth providers.
-                    </p>
-                    <p>
-                        <Link href="https://github.com/Shukaaku/materialicons.css">materialicons.css</Link> provides
-                        some icons for your website.
-                    </p>
-                </div>
-            </div>
-            <div className="box-container">
-                <h1 className="title turquoise-text">
-                    <i className="emoji congablob"></i> Activity:
-                </h1>
-                <div className="info-container">
-                    <embed
-                        src="https://wakatime.com/share/@6e7df88f-a5a8-45bb-9d7d-c930011dd0ce/a73d6560-d63b-4e93-a651-353cb008c482.svg"
-                        style={{ width: '100%' }}
-                    ></embed>
-                </div>
-            </div>
-            <div className="box-container">
-                <h1 className="title turquoise-text">
-                    <i className="emoji blobglitch"></i> Join my Discord Server!
-                </h1>
-                <div className="info-container center-flex">
-                    <iframe
-                        src="https://discord.com/widget?id=830047984573480970&theme=dark"
-                        width={350}
-                        height={500}
-                        frameBorder={0}
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-                    ></iframe>
+                    <h2>Anime</h2>
+                    <DiscordMessages>
+                        <DiscordMessage author="Tomio" avatar="https://tomio.codes/profile.jpg">
+                            !y naruto Naruto
+                        </DiscordMessage>
+                        <DiscordMessage author="Yukikaze" avatar="/profile.png">
+                            <DiscordEmbed
+                                slot="embeds"
+                                color="#fff"
+                                embedTitle="Uzumaki Naruto"
+                                thumbnail="https://narutoql.s3.amazonaws.com/Naruto2.jpg"
+                            >
+                                A Genin from the village of Konoha, Uzumaki Naruto is the container for the Kyuubi Demon
+                                Fox. Shortly after he was born, the Kyuubi attacked the village. To stop the demon the
+                                Fourth Hokage was forced to imprison it into the body of the young baby Naruto. As
+                                Naruto grew up the adults in Leaf Village saw Naruto as the demon fox itself. This
+                                feeling was passed on to their children who also looked down on Naruto. Growing up
+                                Naruto did not have anyone who really cared him. Because of this Naruto has grown up
+                                seeking to have everyone recognize him as being a skilled ninja. To that end his goal is
+                                to surpass the Hokage.
+                                <span slot="footer">Powered by narutoql.com</span>
+                                <DiscordEmbedFields slot="fields">
+                                    <DiscordEmbedField fieldTitle="Age">16</DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Rank">Genin - Team 7</DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Village">leaf village</DiscordEmbedField>
+                                    <DiscordEmbedField fieldTitle="Quotes">
+                                        &#34;Until I become Hokage, I refuse to die!&#34;
+                                    </DiscordEmbedField>
+                                </DiscordEmbedFields>
+                            </DiscordEmbed>
+                        </DiscordMessage>
+                    </DiscordMessages>
                 </div>
             </div>
         </section>
@@ -154,8 +146,8 @@ const Home = () => (
                     ></path>
                 </svg>
                 <br />
-                <Link href="https://github.com/1chiSensei/tomio.cdes/blob/main/LICENSE">LICENSE</Link> | Yoshida Tomio |{' '}
-                <Link href="https://github.com/1chiSensei/tomio.codes">Source</Link>
+                <Link href="https://github.com/yukikaze-bot/yukikaze.tech/blob/main/LICENSE">LICENSE</Link> | Yoshida
+                Tomio | <Link href="https://github.com/yukikaze-bot/yukikaze.tech">Source</Link>
             </p>
         </footer>
 

@@ -1084,6 +1084,27 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.6.tgz#023d72a5c4531b4ce204528971700a78a85a0c50"
   integrity sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA==
 
+"@skyra/discord-components-core@latest":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@skyra/discord-components-core/-/discord-components-core-2.0.7.tgz#355263ae1e96d0dc453e03b06685232cb13104ca"
+  integrity sha512-yX2leyv529N9hoQwinBV7cQCMVretkqrpghvQXofYp4v8vaNaPgr/JuLjRuSUes1GfqoNDoNEFunbzUdTko4Hg==
+  dependencies:
+    "@stencil/core" "^2.5.2"
+    clsx "^1.1.1"
+    hex-to-rgba "^2.0.1"
+
+"@skyra/discord-components-react@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@skyra/discord-components-react/-/discord-components-react-2.0.6.tgz#65b04e871b9a824e0394cd740a1f554994971c35"
+  integrity sha512-cUm9zkqomntRTNkjQWYaIgGnlUowPWBFP0+T4e7yrpE3DYY4eysadYF/lpuJMIVwADSD1qf5kpAwKq1Dv063Vw==
+  dependencies:
+    "@skyra/discord-components-core" latest
+
+"@stencil/core@^2.5.2":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.6.0.tgz#29da96d8b6fc83e689b9f297ef3e8b59b90a676a"
+  integrity sha512-QsxWayZyusnqSZrlCl81R71rA3KqFjVVQSH4E0rGN15F1GdQaFonKlHLyCOLKLig1zzC+DQkLLiUuocexuvdeQ==
+
 "@surma/rollup-plugin-off-main-thread@^1.4.1":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-1.4.2.tgz#e6786b6af5799f82f7ab3a82e53f6182d2b91a58"
@@ -1754,6 +1775,11 @@ clean-webpack-plugin@^3.0.0:
   dependencies:
     "@types/webpack" "^4.4.31"
     del "^4.1.1"
+
+clsx@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
 
 color-convert@^1.9.0:
   version "1.9.3"
@@ -2692,6 +2718,11 @@ he@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+hex-to-rgba@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/hex-to-rgba/-/hex-to-rgba-2.0.1.tgz#4176977882a1cb32b83ce5ab1db6828ab84d5a13"
+  integrity sha512-5XqPJBpsEUMsseJUi2w2Hl7cHFFi3+OO10M2pzAvKB1zL6fc+koGMhmBqoDOCB4GemiRM/zvDMRIhVw6EkB8dQ==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
