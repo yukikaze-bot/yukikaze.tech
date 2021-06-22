@@ -136,6 +136,10 @@ a:hover {
     background-image: url(/gojo.gif);
 }
 
+.fingertwirl {
+    background-image: url(/fingertwirl.png);
+}
+
 @media (max-width: 550px) {
     .info-container {
         padding-left: 0;
