@@ -5,6 +5,7 @@ import {
     DiscordEmbedField,
     DiscordEmbedFields,
 } from '@skyra/discord-components-react';
+import { InferGetStaticPropsType } from 'next';
 import Typist from 'react-typist';
 import Script from 'next/script';
 import Link from 'next/link';
@@ -16,16 +17,17 @@ const scrollToEl = (getID: string) => {
     el?.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
     history.pushState(null, null!, `#${id}`);
 };
-
-const getStats = async () => {
+export const getStaticProps = async () => {
     const data = await (await fetch('https://yukikaze.tech/api/stats')).json();
 
-    return data;
+    return {
+        props: {
+            ...data,
+        },
+    };
 };
 
-const Home = async () => {
-    const { guilds, users, channels, commands } = await getStats();
-
+const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
         <>
             <div className="fullscreen">
