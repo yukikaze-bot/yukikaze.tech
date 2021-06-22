@@ -168,43 +168,37 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                         <h2>Search</h2>
                         <DiscordMessages>
                             <DiscordMessage author="Tomio" avatar="https://tomio.codes/profile.jpg">
-                                !y anime Demon Slayer
+                                !y pokemon Pikachu
                             </DiscordMessage>
                             <DiscordMessage author="Yukikaze" avatar="/profile.png">
                                 <DiscordEmbed
                                     slot="embeds"
                                     color="#ff0000"
-                                    embedTitle="Kimetsu no Yaiba"
-                                    thumbnail="https://media.kitsu.io/anime/poster_images/41370/original.jpg?1597699092"
-                                    image="https://media.kitsu.io/anime/cover_images/41370/original.jpg?1597701689"
+                                    embedTitle="Pikachu"
+                                    thumbnail="https://play.pokemonshowdown.com/sprites/ani/pikachu.gif"
+                                    url="https://www.smogon.com/dex/ss/pokemon/pikachu"
                                 >
-                                    It is the Taisho Period in Japan. Tanjiro, a kindhearted boy who sells charcoal for
-                                    a living, finds his family slaughtered by a demon. To make matters worse, his
-                                    younger sister Nezuko, the sole survivor, has been transformed into a demon herself.
-                                    Though devastated by this grim reality, Tanjiro resolves to become a “demon slayer”
-                                    so that he can turn his sister back into a human, and kill the demon that massacred
-                                    his family.
-                                    <br />
-                                    (Source: Crunchyroll)
-                                    <span slot="footer">Page 1 / 7</span>
+                                    When Pikachu meet, they&#39;ll touch their tails together and exchange electricity
+                                    through them as a form of greeting.
+                                    <span slot="footer">Powered by graphqlpokemon.favware.tech</span>
                                     <DiscordEmbedFields slot="fields">
-                                        <DiscordEmbedField fieldTitle="Rating" inline>
-                                            R
+                                        <DiscordEmbedField fieldTitle="Number" inline>
+                                            25
                                         </DiscordEmbedField>
-                                        <DiscordEmbedField fieldTitle="Status" inline>
-                                            Finished
+                                        <DiscordEmbedField fieldTitle="Type" inline>
+                                            Electric
                                         </DiscordEmbedField>
-                                        <DiscordEmbedField fieldTitle="Average Rating" inline>
-                                            85.81%
+                                        <DiscordEmbedField fieldTitle="Ability" inline>
+                                            Static
                                         </DiscordEmbedField>
-                                        <DiscordEmbedField fieldTitle="Episodes" inline>
-                                            26
+                                        <DiscordEmbedField fieldTitle="Height" inline>
+                                            0.4m
                                         </DiscordEmbedField>
-                                        <DiscordEmbedField fieldTitle="Favorites" inline>
-                                            2,030
+                                        <DiscordEmbedField fieldTitle="Weight" inline>
+                                            6kg
                                         </DiscordEmbedField>
-                                        <DiscordEmbedField fieldTitle="Season" inline>
-                                            Spring
+                                        <DiscordEmbedField fieldTitle="Tier" inline>
+                                            NFE
                                         </DiscordEmbedField>
                                     </DiscordEmbedFields>
                                 </DiscordEmbed>
