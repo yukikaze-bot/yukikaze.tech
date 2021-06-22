@@ -10,7 +10,7 @@ interface Response {
     };
 }
 
-const req = async (req: NextApiRequest, res: NextApiResponse) => {
+const req = async (_: NextApiRequest, res: NextApiResponse) => {
     const {
         body: {
             data: { guilds, users, channels, commands },
