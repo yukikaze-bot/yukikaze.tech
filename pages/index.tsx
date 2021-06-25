@@ -4,6 +4,7 @@ import {
     DiscordEmbed,
     DiscordEmbedField,
     DiscordEmbedFields,
+    DiscordAttachment,
 } from '@skyra/discord-components-react';
 import { InferGetStaticPropsType } from 'next';
 import Typist from 'react-typist';
@@ -202,6 +203,30 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                                         </DiscordEmbedField>
                                     </DiscordEmbedFields>
                                 </DiscordEmbed>
+                            </DiscordMessage>
+                        </DiscordMessages>
+                        <h2>Image Manipulation</h2>
+                        <DiscordMessages>
+                            <DiscordMessage author="Tomio" avatar="https://tomio.codes/profile.jpg">
+                                !y circle
+                            </DiscordMessage>
+                            <DiscordMessage author="Yukikaze" avatar="/profile.png">
+                                <DiscordAttachment url="https://cdn.discordapp.com/attachments/811880386883878952/857832257972731924/circle.png"></DiscordAttachment>
+                            </DiscordMessage>
+                        </DiscordMessages>
+                        <h2>Tag System</h2>
+                        <DiscordMessages>
+                            <DiscordMessage author="Tomio" avatar="https://tomio.codes/profile.jpg">
+                                !y tag create Welcome Welcome to our server!
+                            </DiscordMessage>
+                            <DiscordMessage author="Yukikaze" avatar="/profile.png">
+                                Tag <strong>Welcome</strong> was created successfully!
+                            </DiscordMessage>
+                            <DiscordMessage author="Tomio" avatar="https://tomio.codes/profile.jpg">
+                                !y tag show Welcome
+                            </DiscordMessage>
+                            <DiscordMessage author="Yukikaze" avatar="/profile.png">
+                                Welcome to our server!
                             </DiscordMessage>
                         </DiscordMessages>
                     </div>
