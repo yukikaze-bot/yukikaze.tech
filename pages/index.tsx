@@ -181,7 +181,7 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                                 >
                                     When Pikachu meet, they&#39;ll touch their tails together and exchange electricity
                                     through them as a form of greeting.
-                                    <span slot="footer">Powered by graphqlpokemon.favware.tech</span>
+                                    <span slot="footer">Powered by the GraphQL Pokemon API made by Favware</span>
                                     <DiscordEmbedFields slot="fields">
                                         <DiscordEmbedField fieldTitle="Number" inline>
                                             25
