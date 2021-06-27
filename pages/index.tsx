@@ -7,6 +7,7 @@ import {
     DiscordAttachment,
 } from '@skyra/discord-components-react';
 import { InferGetStaticPropsType } from 'next';
+import { gql, request } from 'graphql-request';
 import Typist from 'react-typist';
 import Script from 'next/script';
 import Link from 'next/link';
@@ -18,8 +19,17 @@ const scrollToEl = (getID: string) => {
     el?.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
     history.pushState(null, null!, `#${id}`);
 };
+
 export const getStaticProps = async () => {
-    const data = await (await fetch('https://yukikaze.tech/api/stats')).json();
+    const query = gql`
+        {
+            guilds
+            users
+            commands
+            channels
+        }
+    `;
+    const data = await request('https://graphql.yukikaze.tech', query);
 
     return {
         props: {
