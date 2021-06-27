@@ -15,5 +15,8 @@ module.exports = withBundleAnalyzer(
             runtimeCaching,
         },
         webpack: (config) => config,
+        eslint: {
+            ignoreDuringBuilds: true,
+        },
     }),
 );
