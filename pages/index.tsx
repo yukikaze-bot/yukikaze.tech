@@ -82,6 +82,13 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                             >
                                 GitHub
                             </a>
+                            <a
+                                href="/download"
+                                className="btn gitea-dropshadow animation hover"
+                                onClick={() => shell.open('https://yukikaze.tech/download')}
+                            >
+                                Download
+                            </a>
                             <a href="mailto:contact@yukikaze.tech" className="btn emerald-dropshadow animation hover">
                                 Email
                             </a>
