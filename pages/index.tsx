@@ -6,11 +6,11 @@ import {
     DiscordEmbedFields,
     DiscordAttachment,
 } from '@skyra/discord-components-react';
+import { shell } from '@tauri-apps/api';
 import { InferGetStaticPropsType } from 'next';
 import { gql, request } from 'graphql-request';
 import Typist from 'react-typist';
 import Script from 'next/script';
-import Link from 'next/link';
 
 const scrollToEl = (getID: string) => {
     const id = getID.replaceAll('#', '');
@@ -68,10 +68,18 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                             </div>
                         </section>
                         <div className="buttons">
-                            <a href="/discord" className="btn discord-dropshadow animation hover">
+                            <a
+                                href="/discord"
+                                className="btn discord-dropshadow animation hover"
+                                onClick={() => shell.open('https://yukikaze.tech/discord')}
+                            >
                                 Discord
                             </a>
-                            <a href="/github" className="btn github-dropshadow animation hover">
+                            <a
+                                href="/github"
+                                className="btn github-dropshadow animation hover"
+                                onClick={() => shell.open('https://yukikaze.tech/github')}
+                            >
                                 GitHub
                             </a>
                             <a href="mailto:contact@yukikaze.tech" className="btn emerald-dropshadow animation hover">
@@ -266,8 +274,19 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                         ></path>
                     </svg>
                     <br />
-                    <Link href="https://github.com/yukikaze-bot/yukikaze.tech/blob/main/LICENSE">LICENSE</Link> |
-                    Yoshida Tomio | <Link href="https://github.com/yukikaze-bot/yukikaze.tech">Source</Link>
+                    <a
+                        href="https://github.com/yukikaze-bot/yukikaze.tech/blob/main/LICENSE"
+                        onClick={() => shell.open('https://github.com/yukikaze-bot/yukikaze.tech/blob/main/LICENSE')}
+                    >
+                        LICENSE
+                    </a>{' '}
+                    | Yoshida Tomio |{' '}
+                    <a
+                        href="https://github.com/yukikaze-bot/yukikaze.tech"
+                        onClick={() => shell.open('https://github.com/yukikaze-bot/yukikaze.tech/')}
+                    >
+                        Source
+                    </a>
                 </p>
             </footer>
 
