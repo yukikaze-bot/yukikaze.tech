@@ -1,7 +1,7 @@
 {
   "package": {
     "productName": "Yukikaze",
-    "version": "1.1.1"
+    "version": "1.2.0"
   },
   "build": {
     "distDir": "../out",
@@ -47,7 +47,11 @@
     },
     "updater": {
       "active": true,
-      "endpoints": []
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEQ3MUYyQ0EwQjIwNUQ2RjYKUldUMjFnV3lvQ3dmMTZaNVhsZzJRVEFzSEZWNmVTL3NXczhTUWVvYmdZR050VGd5c1BIOFdIMi8K",
+      "endpoints": [
+          "https://update.yukikaze.tech/update/{{target}}/{{current_version}}"
+      ]
     },
     "allowlist": {
       "all": true

@@ -2,6 +2,7 @@
 
 # Signed keys
 *.key
+*.pub
 
 # Generated service worker
 sw.js

@@ -1,2 +1,4 @@
 public/**/*
 next.config.js
+out/
+.next/
