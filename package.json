@@ -1,6 +1,6 @@
 {
     "name": "tomio.codes",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -14,7 +14,6 @@
         "@skyra/discord-components-react": "^2.0.6",
         "@tauri-apps/api": "^1.0.0-beta.3",
         "graphql": "^15.5.1",
-        "graphql-request": "^3.4.0",
         "next": "11.0.0",
         "next-pwa": "^5.2.21",
         "react": "17.0.2",

@@ -8,7 +8,6 @@ import {
 } from '@skyra/discord-components-react';
 import { shell } from '@tauri-apps/api';
 import { InferGetStaticPropsType } from 'next';
-import { gql, request } from 'graphql-request';
 import Typist from 'react-typist';
 import Script from 'next/script';
 
@@ -21,15 +20,7 @@ const scrollToEl = (getID: string) => {
 };
 
 export const getStaticProps = async () => {
-    const query = gql`
-        {
-            guilds
-            users
-            commands
-            channels
-        }
-    `;
-    const data = await request('https://graphql.yukikaze.tech', query);
+    const data = await (await fetch('https://rest.yukikaze.tech/stats')).json();
 
     return {
         props: {
