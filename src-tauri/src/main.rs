@@ -24,11 +24,7 @@ fn main() {
                     "https://yukikaze.tech/download",
                 )]);
 
-            app.listen_global("loaded", |event| {
-                println!("got loaded {:?}", event.payload());
-
-                client.set_activity(activity)?;
-            });
+            client.set_activity(activity)?;
 
             Ok(())
         })
