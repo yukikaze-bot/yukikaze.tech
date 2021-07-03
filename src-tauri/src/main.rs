@@ -7,7 +7,7 @@ use discord_rich_presence::{activity, new_client, DiscordIpc};
 
 fn main() {
     tauri::Builder::default()
-        .setup(|app| {
+        .setup(|app| -> Result<(), Box<dyn std::error::Error>> {
             let mut client = new_client("855428383574589460")?;
             client.connect()?;
 
