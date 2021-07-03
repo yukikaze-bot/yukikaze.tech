@@ -3,7 +3,7 @@
     windows_subsystem = "windows"
 )]
 
-use rustcord::{Rustcord, EventHandlers, User, RichPresenceBuilder};
+use discord_rich_presence::{activity, new_client, DiscordIpc};
 
 pub struct Handlers;
 
@@ -16,21 +16,26 @@ impl EventHandlers for Handlers {
 fn main() {
     tauri::Builder::default()
         .setup(|app| {
-            let discord = Rustcord::init::<Handlers>("855428383574589460", true, None)?;
-            let presence = RichPresenceBuilder::new()
+            let mut client = new_client("855428383574589460")?;
+            client.connect()?;
+
+            let activity = activity::Activity::new()
                 .state("Yukikaze")
-                .details("Browsing the desktop app")
-                .large_image_key("yukikaze")
-                .large_image_text("Yukikaze")
-                .build();
+                .details("Viewing the Yukikaze desktop app")
+                .assets(
+                    activity::Assets::new()
+                        .large_image("yukikaze")
+                        .large_text("Yukikaze"),
+                )
+                .buttons(vec![activity::Button::new(
+                    "Download",
+                    "https://yukikaze.tech/download",
+                )]);
 
             app.listen_global("loaded", |event| {
                 println!("got loaded {:?}", event.payload());
 
-                discord.update_presence(presence)?;
-                loop {
-                    discord.run_callbacks();
-                }
+                client.set_activity(activity)?;
             });
 
             Ok(())
