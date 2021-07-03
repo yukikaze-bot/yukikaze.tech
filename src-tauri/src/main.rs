@@ -5,14 +5,6 @@
 
 use discord_rich_presence::{activity, new_client, DiscordIpc};
 
-pub struct Handlers;
-
-impl EventHandlers for Handlers {
-    fn ready(user: User) {
-        println!("User {}#{} logged in...", user.username, user.discriminator);
-    }
-}
-
 fn main() {
     tauri::Builder::default()
         .setup(|app| {
