@@ -13,7 +13,7 @@ interface Guild {
 
 const GuildsPage: NextPage = () => {
     // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    const authenticated = window?.localStorage.getItem('discord_pack') !== null;
+    const authenticated = globalThis?.window?.localStorage.getItem('discord_pack') !== null;
     const [guilds, setGuilds] = useState<Guild[]>();
     const getGuilds = async () => {
         try {
