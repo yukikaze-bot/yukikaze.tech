@@ -27,24 +27,34 @@ const GuildsPage: NextPage = () => {
     return (
         <>
             {authenticated ? (
-                <div className="markdown-jekyll">
-                    <h1 className="center-text">Your Guilds</h1>
-                    <hr />
+                <section className="paper-container">
+                    <div className="ribbon"></div>
+                    <div className="paper">
+                        <div className="markdown-jekyll">
+                            <h1 className="text-center">Your Guilds</h1>
+                            <hr />
 
-                    <table className="center-flex">
-                        <tr>
-                            {guilds?.map((guild) => (
-                                <td key={guild.id}>
-                                    <img src={guild.icon ?? ''} width={512} height={512} alt={`${guild.name}'s Icon`} />
-                                    <br />
-                                    <sub>
-                                        <b>{guild.name}</b>
-                                    </sub>
-                                </td>
-                            ))}
-                        </tr>
-                    </table>
-                </div>
+                            <table className="center-flex">
+                                <tr>
+                                    {guilds?.map((guild) => (
+                                        <td key={guild.id}>
+                                            <img
+                                                src={guild.icon ?? ''}
+                                                width={256}
+                                                height={256}
+                                                alt={`${guild.name}'s Icon`}
+                                            />
+                                            <br />
+                                            <sub>
+                                                <b>{guild.name}</b>
+                                            </sub>
+                                        </td>
+                                    ))}
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
             ) : (
                 <div className="center-object">
                     <Error statusCode={401} title="Unauthorized" />
