@@ -1,4 +1,3 @@
-import { useAuthenticated } from '../contexts/authentication';
 import { apiFetch } from '../utils/apiFetch';
 import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
@@ -13,7 +12,8 @@ interface Guild {
 }
 
 const GuildsPage: NextPage = () => {
-    const authenticated = useAuthenticated();
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    const authenticated = window?.localStorage.getItem('discord_pack') !== null;
     const [guilds, setGuilds] = useState<Guild[]>();
     const getGuilds = async () => {
         try {
@@ -24,8 +24,6 @@ const GuildsPage: NextPage = () => {
     };
 
     useEffect(() => void getGuilds(), []);
-
-    console.log(authenticated);
 
     return (
         <>
