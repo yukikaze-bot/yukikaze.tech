@@ -16,7 +16,7 @@ const GuildsPage: NextPage = () => {
                 <Error statusCode={401} />
             </When>
 
-            <When condition={authenticated}>
+            {authenticated && (
                 <div className="markdown-jekyll">
                     <h1>{pack.user.username}&#39;s Guilds</h1>
                     <hr />
@@ -40,7 +40,7 @@ const GuildsPage: NextPage = () => {
                         </tr>
                     </table>
                 </div>
-            </When>
+            )}
         </>
     );
 };
