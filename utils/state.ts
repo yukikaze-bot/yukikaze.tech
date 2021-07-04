@@ -1,17 +1,27 @@
-export const loadState = <T>(key: 'discord_pack'): T | null => {
-    const serializedState = localStorage.getItem(key);
+import { hasWindow } from './hasWindow';
 
-    return serializedState ? (JSON.parse(serializedState) as T) : null;
+export const loadState = <T>(key: 'discord_pack'): T | null => {
+    if (hasWindow()) {
+        const serializedState = localStorage.getItem(key);
+
+        return serializedState ? (JSON.parse(serializedState) as T) : null;
+    }
+
+    return null;
 };
 
 export const saveState = <T>(key: 'discord_pack', state: T): T => {
     try {
-        const serializedState = JSON.stringify(state);
+        if (hasWindow()) {
+            const serializedState = JSON.stringify(state);
 
-        localStorage.setItem(key, serializedState);
+            localStorage.setItem(key, serializedState);
+        }
     } catch {}
 
     return state;
 };
 
-export const clearState = (key: 'discord_pack') => localStorage.removeItem(key);
+export const clearState = (key: 'discord_pack') => {
+    if (hasWindow()) localStorage.removeItem(key);
+};
