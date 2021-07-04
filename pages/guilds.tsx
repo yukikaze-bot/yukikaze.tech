@@ -35,7 +35,7 @@ const GuildsPage: NextPage = () => {
 
                     <table className="center-flex">
                         <tr>
-                            {guilds!.map((guild) => (
+                            {guilds?.map((guild) => (
                                 <td key={guild.id}>
                                     <img src={guild.icon ?? ''} width={512} height={512} alt={`${guild.name}'s Icon`} />
                                     <br />
