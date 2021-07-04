@@ -1,8 +1,8 @@
 import { useAuthenticated } from '../contexts/authentication';
-import { useDiscordPack } from '../contexts/discordPack';
 import { apiFetch } from '../utils/apiFetch';
 import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
+import { When } from 'react-if';
 import Error from 'next/error';
 
 interface Guild {
@@ -14,7 +14,6 @@ interface Guild {
 
 const GuildsPage: NextPage = () => {
     const authenticated = useAuthenticated();
-    const pack = useDiscordPack();
     const [guilds, setGuilds] = useState<Guild[]>();
     const getGuilds = async () => {
         try {
@@ -28,9 +27,9 @@ const GuildsPage: NextPage = () => {
 
     return (
         <>
-            {authenticated ? (
+            <When condition={authenticated}>
                 <div className="markdown-jekyll">
-                    <h1 className="center-text">{pack.user?.username}&#39;s Guilds</h1>
+                    <h1 className="center-text">Your Guilds</h1>
                     <hr />
 
                     <table className="center-flex">
@@ -47,9 +46,11 @@ const GuildsPage: NextPage = () => {
                         </tr>
                     </table>
                 </div>
-            ) : (
+            </When>
+
+            <When condition={!authenticated}>
                 <Error statusCode={401} />
-            )}
+            </When>
         </>
     );
 };
