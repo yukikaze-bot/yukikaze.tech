@@ -1,6 +1,6 @@
 {
     "name": "tomio.codes",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -11,12 +11,16 @@
     },
     "dependencies": {
         "@next/bundle-analyzer": "^11.0.0",
+        "@sapphire/plugin-api": "^2.2.0",
+        "@sapphire/utilities": "^1.6.1",
         "@skyra/discord-components-react": "^2.0.6",
         "@tauri-apps/api": "^1.0.0-beta.3",
+        "constate": "^3.3.0",
         "graphql": "^15.5.1",
         "jquery": "^3.6.0",
         "next": "11.0.0",
         "next-pwa": "^5.2.21",
+        "next-seo": "^4.26.0",
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "react-typist": "^2.0.5"
