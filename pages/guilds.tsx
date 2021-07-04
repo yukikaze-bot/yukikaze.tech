@@ -23,7 +23,7 @@ const GuildsPage: NextPage = () => {
 
                     <table>
                         <tr>
-                            {pack.guilds.forEach((guild: Guild) => (
+                            {pack.guilds?.forEach((guild: Guild) => (
                                 <td>
                                     <img
                                         src={iconUrl(guild) ?? ''}
