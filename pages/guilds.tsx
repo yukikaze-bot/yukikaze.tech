@@ -1,22 +1,22 @@
 import { useAuthenticated } from '../contexts/authentication';
 import { useDiscordPack } from '../contexts/discordPack';
+import { apiFetch } from '../utils/apiFetch';
 import { iconUrl } from '../utils/iconUrl';
 import type { Guild } from 'discord.js';
 import type { NextPage } from 'next';
-import { When } from 'react-if';
 import Error from 'next/error';
 
 const GuildsPage: NextPage = () => {
     const authenticated = useAuthenticated();
     const pack = useDiscordPack();
 
+    apiFetch('/bot/shared-guilds')
+        .then(console.log)
+        .catch(() => null);
+
     return (
         <>
-            <When condition={!authenticated}>
-                <Error statusCode={401} />
-            </When>
-
-            {authenticated && (
+            {authenticated ? (
                 <div className="markdown-jekyll">
                     <h1>{pack.user?.username}&#39;s Guilds</h1>
                     <hr />
@@ -40,6 +40,8 @@ const GuildsPage: NextPage = () => {
                         </tr>
                     </table>
                 </div>
+            ) : (
+                <Error statusCode={401} />
             )}
         </>
     );
