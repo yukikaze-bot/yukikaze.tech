@@ -1,7 +1,6 @@
 import { apiFetch } from '../utils/apiFetch';
 import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
-import { When } from 'react-if';
 import Error from 'next/error';
 
 interface Guild {
@@ -27,7 +26,7 @@ const GuildsPage: NextPage = () => {
 
     return (
         <>
-            <When condition={authenticated}>
+            {authenticated ? (
                 <div className="markdown-jekyll">
                     <h1 className="center-text">Your Guilds</h1>
                     <hr />
@@ -46,11 +45,9 @@ const GuildsPage: NextPage = () => {
                         </tr>
                     </table>
                 </div>
-            </When>
-
-            <When condition={!authenticated}>
-                <Error statusCode={401} />
-            </When>
+            ) : (
+                <Error statusCode={401} title="Unauthorized" />
+            )}
         </>
     );
 };
