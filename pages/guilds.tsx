@@ -18,7 +18,7 @@ const GuildsPage: NextPage = () => {
 
             {authenticated && (
                 <div className="markdown-jekyll">
-                    <h1>{pack.user.username}&#39;s Guilds</h1>
+                    <h1>{pack.user?.username}&#39;s Guilds</h1>
                     <hr />
 
                     <table>
