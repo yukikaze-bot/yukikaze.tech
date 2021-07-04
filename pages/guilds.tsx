@@ -25,6 +25,8 @@ const GuildsPage: NextPage = () => {
 
     useEffect(() => void getGuilds(), []);
 
+    console.log(authenticated);
+
     return (
         <>
             <When condition={authenticated}>
