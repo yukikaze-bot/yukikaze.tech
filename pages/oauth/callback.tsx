@@ -25,7 +25,7 @@ const OAuthCallback: NextPage = () => {
                 method: 'POST',
                 body: JSON.stringify({
                     code,
-                    clientId: '',
+                    clientId: '855428383574589460',
                     redirectUri: 'https://yukikaze.tech/oauth/callback',
                 }),
             });
