@@ -46,7 +46,9 @@ const GuildsPage: NextPage = () => {
                     </table>
                 </div>
             ) : (
-                <Error statusCode={401} title="Unauthorized" />
+                <div className="center-object">
+                    <Error statusCode={401} title="Unauthorized" />
+                </div>
             )}
         </>
     );
