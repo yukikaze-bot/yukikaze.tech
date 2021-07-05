@@ -3,7 +3,17 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         fontFamily: {
-            sans: '-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
+            sans: [
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Helvetica',
+                'Arial',
+                'sans-serif',
+                '"Apple Color Emoji"',
+                '"Segoe UI Emoji"',
+                '"Segoe UI Symbol"'
+            ],
         },
         extend: {},
     },
@@ -12,3 +22,5 @@ module.exports = {
     },
     plugins: [require('@tailwindcss/forms')],
 };
+
+// '-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol'
