@@ -1,59 +1,59 @@
 name: Release Updater
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
 jobs:
-  build:
-    strategy:
-      fail-fast: false
-      matrix:
-        platform: [macos-latest, ubuntu-latest, windows-latest]
+    build:
+        strategy:
+            fail-fast: false
+            matrix:
+                platform: [macos-latest, ubuntu-latest, windows-latest]
 
-    runs-on: ${{ matrix.platform }}
-    steps:
-    - uses: actions/checkout@v2
+        runs-on: ${{ matrix.platform }}
+        steps:
+            - uses: actions/checkout@v2
 
-    - name: Install node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16
-    - name: Install Rust
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
+            - name: Install node.js
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 16
+            - name: Install Rust
+              uses: actions-rs/toolchain@v1
+              with:
+                  toolchain: stable
 
-    - name: (setup) cargo cache
-      uses: actions/cache@v2
-      with:
-        path: |
-          ~/.cargo/bin/
-          ~/.cargo/registry/index/
-          ~/.cargo/registry/cache/
-          ~/.cargo/git/db/
-          target/
-        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+            - name: (setup) cargo cache
+              uses: actions/cache@v2
+              with:
+                  path: |
+                      ~/.cargo/bin/
+                      ~/.cargo/registry/index/
+                      ~/.cargo/registry/cache/
+                      ~/.cargo/git/db/
+                      target/
+                  key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-    - name: install webkit2gtk (ubuntu only)
-      if: matrix.platform == 'ubuntu-latest'
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y webkit2gtk-4.0
+            - name: install webkit2gtk (ubuntu only)
+              if: matrix.platform == 'ubuntu-latest'
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y webkit2gtk-4.0
 
-    - name: Install Deps
-      run: yarn && yarn build && yarn export
+            - name: Install Deps
+              run: yarn && yarn build && yarn export
 
-    - name: Publish Binaries
-      uses: tauri-apps/tauri-action@v0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TAURI_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        TAURI_KEY_PASSWORD: ${{ secrets.PASSWORD }}
-      with:
-        tagName: v__VERSION__
-        releaseName: "App v__VERSION__"
-        body: "See the assets to download this version and install."
-        draft: true
-        prerelease: false
+            - name: Publish Binaries
+              uses: tauri-apps/tauri-action@v0
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  TAURI_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+                  TAURI_KEY_PASSWORD: ${{ secrets.PASSWORD }}
+              with:
+                  tagName: v__VERSION__
+                  releaseName: 'App v__VERSION__'
+                  body: 'See the assets to download this version and install.'
+                  draft: true
+                  prerelease: false
