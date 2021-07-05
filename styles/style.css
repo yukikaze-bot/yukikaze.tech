@@ -43,6 +43,10 @@ a:hover {
     padding-left: 2.5em;
 }
 
+.full-width {
+    width: 100% !important;
+}
+
 .parallax-container .parallax {
     filter: blur(4px) brightness(50%);
 }
