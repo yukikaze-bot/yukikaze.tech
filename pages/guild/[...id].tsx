@@ -31,7 +31,7 @@ const GuildPage: NextPage = () => {
 
         setGuild(guild!);
     }, [guildId]);
-    const submit = (data: Record<string, string>) => {
+    const submit = async (data: Record<string, string>) => {
         toast.success('Settings were saved!', {
             style: {
                 borderRadius: '10px',
@@ -40,7 +40,9 @@ const GuildPage: NextPage = () => {
             },
         });
 
-        return apiFetch(`/guilds/${guildId as string}/prefix`, {
+        console.log(data);
+
+        await apiFetch(`/guilds/${guildId as string}/prefix`, {
             method: 'POST',
             body: JSON.stringify(data),
         });
