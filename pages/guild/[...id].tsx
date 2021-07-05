@@ -72,16 +72,16 @@ const GuildPage: NextPage = () => {
                     <div className="ribbon"></div>
                     <div className="paper">
                         <form onSubmit={handleSubmit(submit)}>
-                            <label htmlFor="prefix">
-                                <input
-                                    type="text"
-                                    placeholder="!y"
-                                    {...register('prefix', { minLength: 1, maxLength: 15 })}
-                                />
-                            </label>
-
-                            <br />
-                            <button type="submit">Save</button>
+                            <div className="flex-grid">
+                                <div className="col-xs-12">
+                                    <label htmlFor="prefix">Prefix</label>
+                                    <input
+                                        className="full-width"
+                                        type="text"
+                                        {...register('prefix', { maxLength: 15, minLength: 1 })}
+                                    />
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </section>
