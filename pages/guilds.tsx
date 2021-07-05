@@ -52,6 +52,7 @@ const GuildsPage: NextPage = () => {
                                                     {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
                                                 </b>
                                             </sub>
+                                            <hr />
                                         </div>
                                     ))}
                             </section>
