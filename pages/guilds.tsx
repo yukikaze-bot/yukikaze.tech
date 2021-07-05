@@ -45,10 +45,10 @@ const GuildsPage: NextPage = () => {
                                                 width={256}
                                                 height={256}
                                                 alt={`${guild.name}'s Icon`}
-                                                className="center-flex"
+                                                className="center-display"
                                             />
                                             <br />
-                                            <sub className="center-flex">
+                                            <sub>
                                                 <b>
                                                     {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
                                                 </b>
