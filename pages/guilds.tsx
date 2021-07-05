@@ -48,12 +48,10 @@ const GuildsPage: NextPage = () => {
                                                 className="center-display"
                                             />
                                             <br />
-                                            <sub className="center-display">
-                                                <b>
-                                                    {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
-                                                    <br />
-                                                </b>
-                                            </sub>
+                                            <h5 className="center-display" style={{ fontWeight: 'bold' }}>
+                                                {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
+                                                <br />
+                                            </h5>
                                             <hr />
                                         </div>
                                     ))}
