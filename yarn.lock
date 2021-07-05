@@ -3711,6 +3711,11 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+goober@^2.0.35:
+  version "2.0.38"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-2.0.38.tgz#ca81fbc37b2fc7a6cfe10fd3d8be3a1867927ac2"
+  integrity sha512-oGrP8xMB3k6EEcEAuKstd05r0JRFs8L9ouPCTKxupu85PdDJ443LTCXvxRVMeYN6pVhV6htVb7FaKTk5JlFzCQ==
+
 got@11.8.2:
   version "11.8.2"
   resolved "https://registry.yarnpkg.com/got/-/got-11.8.2.tgz#7abb3959ea28c31f3576f1576c1effce23f33599"
@@ -5807,6 +5812,18 @@ react-dom@17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-hook-form@^7.10.1:
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.10.1.tgz#fd7c78ab72402c2f4a7ac4f6184e84ff0df129b2"
+  integrity sha512-YRSkOZ0DJKjJ+PuCB6caFbFSbz6I4JQcGXVb/OeEIVE3YuXXYYJ/YQwodRy8HsZ5WA+DryoThWIeZZzPd5f9lQ==
+
+react-hot-toast@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.0.0.tgz#6e83b2937a20b040acb2d5fd08bcf32561b7832a"
+  integrity sha512-J0J2rcSvKetlziVquwESgk85pV9JB0Dz3RJIZcAEv7CWU2y2z8BQqxmZHZUxjPKIBGPqXAocZch4Kj4oUdX4+w==
+  dependencies:
+    goober "^2.0.35"
 
 react-if@^4.0.1:
   version "4.0.1"
