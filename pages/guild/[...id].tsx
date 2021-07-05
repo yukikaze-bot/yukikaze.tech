@@ -73,7 +73,11 @@ const GuildPage: NextPage = () => {
                     <div className="paper">
                         <form onSubmit={handleSubmit(submit)}>
                             <label htmlFor="prefix">Prefix</label>
-                            <input placeholder="!y" {...register('prefix', { minLength: 1, maxLength: 15 })} />
+                            <input
+                                type="text"
+                                placeholder="!y"
+                                {...register('prefix', { minLength: 1, maxLength: 15 })}
+                            />
 
                             <button type="submit">Save</button>
                         </form>

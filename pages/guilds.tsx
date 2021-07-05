@@ -45,7 +45,7 @@ const GuildsPage: NextPage = () => {
                                                 width={256}
                                                 height={256}
                                                 alt={`${guild.name}'s Icon`}
-                                                className="center-display"
+                                                className="center-display rounded-full"
                                             />
                                             <br />
                                             <h5 className="center-display" style={{ fontWeight: 'bold' }}>

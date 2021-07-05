@@ -2,6 +2,7 @@ import '../styles/style.css';
 import '../styles/modesta.css';
 import '../styles/normalize.css';
 import 'react-typist/dist/Typist.css';
+import 'tailwindcss/tailwind.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
