@@ -73,9 +73,7 @@ const GuildPage: NextPage = () => {
                     <div className="paper">
                         <form onSubmit={handleSubmit(submit)}>
                             <label htmlFor="prefix">
-                                <span className="text-white-700">Prefix</span>
                                 <input
-                                    className="mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-200 focus:ring-0 focus:border-black"
                                     type="text"
                                     placeholder="!y"
                                     {...register('prefix', { minLength: 1, maxLength: 15 })}
