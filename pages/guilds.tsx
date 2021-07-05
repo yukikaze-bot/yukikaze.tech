@@ -17,7 +17,7 @@ const GuildsPage: NextPage = () => {
     const [guilds, setGuilds] = useState<Guild[]>();
     const getGuilds = async () => {
         try {
-            const guilds = await apiFetch<Guild[]>('/bot/shared-guilds');
+            const guilds = await apiFetch<Guild[]>('/user/guilds');
 
             setGuilds(guilds);
         } catch {}
