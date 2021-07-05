@@ -32,7 +32,7 @@ const GuildsPage: NextPage = () => {
                     <div className="ribbon"></div>
                     <div className="paper">
                         <div className="markdown-jekyll">
-                            <h1 className="text-center">Your Guilds</h1>
+                            <h1 className="text-center text-3xl">Your Guilds</h1>
                             <hr />
 
                             <section className="flex-grid">
