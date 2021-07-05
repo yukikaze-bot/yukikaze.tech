@@ -39,7 +39,7 @@ const GuildsPage: NextPage = () => {
                                 {guilds
                                     ?.filter((guild: Guild) => guild.canManage)
                                     .map((guild) => (
-                                        <div key={guild.id} className="col-xs-4">
+                                        <div key={guild.id} className="col-xs-4 center-flex">
                                             <img
                                                 src={guild.icon ?? ''}
                                                 width={256}
