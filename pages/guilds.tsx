@@ -39,16 +39,17 @@ const GuildsPage: NextPage = () => {
                                 {guilds
                                     ?.filter((guild: Guild) => guild.canManage)
                                     .map((guild) => (
-                                        <div key={guild.id} className="col-xs-4 center-flex">
+                                        <div key={guild.id} className="col-xs-4">
                                             <img
                                                 src={guild.icon ?? ''}
                                                 width={256}
                                                 height={256}
                                                 alt={`${guild.name}'s Icon`}
+                                                className="center-flex"
                                             />
                                             <br />
-                                            <sub>
-                                                <b className="text-center">
+                                            <sub className="center-flex">
+                                                <b>
                                                     {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
                                                 </b>
                                             </sub>
