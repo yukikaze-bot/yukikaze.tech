@@ -8,6 +8,7 @@ interface Guild {
     id: `${bigint}`;
     icon: string | null;
     canManage: boolean;
+    hasBot: boolean | null;
 }
 
 const GuildsPage: NextPage = () => {
@@ -36,20 +37,24 @@ const GuildsPage: NextPage = () => {
 
                             <table className="center-flex">
                                 <tr>
-                                    {guilds?.map((guild) => (
-                                        <td key={guild.id}>
-                                            <img
-                                                src={guild.icon ?? ''}
-                                                width={256}
-                                                height={256}
-                                                alt={`${guild.name}'s Icon`}
-                                            />
-                                            <br />
-                                            <sub>
-                                                <b>{guild.name}</b>
-                                            </sub>
-                                        </td>
-                                    ))}
+                                    {guilds
+                                        ?.filter((guild: Guild) => guild.canManage)
+                                        .map((guild) => (
+                                            <td key={guild.id}>
+                                                <img
+                                                    src={guild.icon ?? ''}
+                                                    width={256}
+                                                    height={256}
+                                                    alt={`${guild.name}'s Icon`}
+                                                />
+                                                <br />
+                                                <sub>
+                                                    <b className="text-center">
+                                                        {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
+                                                    </b>
+                                                </sub>
+                                            </td>
+                                        ))}
                                 </tr>
                             </table>
                         </div>
