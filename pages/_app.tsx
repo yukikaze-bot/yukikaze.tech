@@ -1,4 +1,4 @@
-import 'tailwindcss/tailwind.css';
+import '../styles/tailwind.css';
 import '../styles/style.css';
 import '../styles/modesta.css';
 import '../styles/normalize.css';
