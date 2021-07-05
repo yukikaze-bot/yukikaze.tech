@@ -35,28 +35,26 @@ const GuildsPage: NextPage = () => {
                             <h1 className="text-center">Your Guilds</h1>
                             <hr />
 
-                            <table className="center-flex">
-                                <tr>
-                                    {guilds
-                                        ?.filter((guild: Guild) => guild.canManage)
-                                        .map((guild) => (
-                                            <td key={guild.id}>
-                                                <img
-                                                    src={guild.icon ?? ''}
-                                                    width={256}
-                                                    height={256}
-                                                    alt={`${guild.name}'s Icon`}
-                                                />
-                                                <br />
-                                                <sub>
-                                                    <b className="text-center">
-                                                        {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
-                                                    </b>
-                                                </sub>
-                                            </td>
-                                        ))}
-                                </tr>
-                            </table>
+                            <section className="flex-grid">
+                                {guilds
+                                    ?.filter((guild: Guild) => guild.canManage)
+                                    .map((guild) => (
+                                        <div key={guild.id} className="col-xs-4">
+                                            <img
+                                                src={guild.icon ?? ''}
+                                                width={256}
+                                                height={256}
+                                                alt={`${guild.name}'s Icon`}
+                                            />
+                                            <br />
+                                            <sub>
+                                                <b className="text-center">
+                                                    {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
+                                                </b>
+                                            </sub>
+                                        </div>
+                                    ))}
+                            </section>
                         </div>
                     </div>
                 </section>
