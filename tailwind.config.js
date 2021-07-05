@@ -3,7 +3,7 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         fontFamily: {
-            body: '-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
+            sans: '-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol',
         },
         extend: {},
     },
