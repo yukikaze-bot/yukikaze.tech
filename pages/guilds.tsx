@@ -32,7 +32,7 @@ const GuildsPage: NextPage = () => {
                     <div className="ribbon"></div>
                     <div className="paper">
                         <div className="markdown-jekyll">
-                            <h1 className="text-center">Your Guilds</h1>
+                            <h1 className="text-center text-3xl">Your Guilds</h1>
                             <hr />
 
                             <section className="flex-grid">
@@ -45,7 +45,7 @@ const GuildsPage: NextPage = () => {
                                                 width={256}
                                                 height={256}
                                                 alt={`${guild.name}'s Icon`}
-                                                className="center-display"
+                                                className="center-display rounded-full"
                                             />
                                             <br />
                                             <h5 className="center-display" style={{ fontWeight: 'bold' }}>

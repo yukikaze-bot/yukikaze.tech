@@ -103,7 +103,7 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
 
             <section className="container" id="information">
                 <div className="box-container">
-                    <h1 className="title turquoise-text">
+                    <h1 className="title turquoise-text text-3xl">
                         <i className="emoji nezuko"></i> Information:
                     </h1>
                     <div className="info-container">
@@ -115,7 +115,7 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                     </div>
                 </div>
                 <div className="box-container">
-                    <h1 className="title turquoise-text">
+                    <h1 className="title turquoise-text text-3xl">
                         <i className="emoji fingertwirl"></i> Statistics:
                     </h1>
                     <div className="info-container">
@@ -146,7 +146,7 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                     </div>
                 </div>
                 <div className="box-container">
-                    <h1 className="title turquoise-text">
+                    <h1 className="title turquoise-text text-3xl">
                         <i className="emoji gojo"></i> Features:
                     </h1>
                     <div className="info-container">
