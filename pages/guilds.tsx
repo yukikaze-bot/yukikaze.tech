@@ -51,6 +51,7 @@ const GuildsPage: NextPage = () => {
                                             <sub className="center-display">
                                                 <b>
                                                     {guild.name} | {guild.hasBot ? 'Manage' : 'Invite'}
+                                                    <br />
                                                 </b>
                                             </sub>
                                             <hr />
