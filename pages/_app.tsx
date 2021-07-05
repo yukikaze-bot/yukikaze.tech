@@ -1,4 +1,3 @@
-import 'formbase/dist/formbase.min.css';
 import '../styles/style.css';
 import '../styles/modesta.css';
 import '../styles/normalize.css';

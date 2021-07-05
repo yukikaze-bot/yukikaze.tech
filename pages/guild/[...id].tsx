@@ -82,6 +82,8 @@ const GuildPage: NextPage = () => {
                                     />
                                 </div>
                             </div>
+
+                            <input className="btn highlight" type="submit" value="Save" />
                         </form>
                     </div>
                 </section>
