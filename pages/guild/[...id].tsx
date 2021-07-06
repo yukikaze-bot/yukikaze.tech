@@ -21,6 +21,7 @@ const GuildPage: NextPage = () => {
     const { register, handleSubmit } = useForm({
         defaultValues: {
             prefix: '!y',
+            language: 'en-US',
         },
     });
     const { query } = useRouter();
@@ -42,7 +43,7 @@ const GuildPage: NextPage = () => {
 
         console.log(data);
 
-        await apiFetch(`/guilds/${guildId as string}/prefix`, {
+        await apiFetch(`/guilds/${guildId as string}/settings`, {
             method: 'POST',
             body: JSON.stringify(data),
         });
@@ -73,13 +74,26 @@ const GuildPage: NextPage = () => {
                     <div className="paper">
                         <form onSubmit={handleSubmit(submit)}>
                             <div className="flex-grid">
-                                <div className="col-xs-12">
+                                <div className="col-xs-6">
                                     <label htmlFor="prefix">Prefix</label>
                                     <input
                                         className="full-width"
                                         type="text"
                                         {...register('prefix', { maxLength: 15, minLength: 1 })}
                                     />
+                                </div>
+                                <div className="col-xs-6">
+                                    <label htmlFor="language">Language</label>
+                                    <select className="full-width" {...register('language')}>
+                                        <option value="en-US">English</option>
+                                        <option value="fil-PH">Filipino</option>
+                                        <option value="de-DE">German</option>
+                                        <option value="fr-FR">French</option>
+                                        <option value="id-ID">Indonesian</option>
+                                        <option value="ja-JP">Japanese</option>
+                                        <option value="ko-KR">Korean</option>
+                                        <option value="zh-CN">Chinese Simplified</option>
+                                    </select>
                                 </div>
                             </div>
 
