@@ -44,7 +44,7 @@ const GuildPage: NextPage = () => {
         console.log(data);
 
         await apiFetch(`/guilds/${guildId as string}/settings`, {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify(data),
         });
     };
