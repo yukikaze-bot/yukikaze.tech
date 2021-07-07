@@ -2,8 +2,15 @@ import '../styles/style.css';
 import '../styles/modesta.css';
 import '../styles/normalize.css';
 import 'react-typist/dist/Typist.css';
+import 'nprogress/nprogress.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import Router from 'next/router';
+import nprogress from 'nprogress';
+
+Router.events.on('routeChangeStart', () => nprogress.start());
+Router.events.on('routeChangeComplete', () => nprogress.done());
+Router.events.on('routeChangeError', () => nprogress.done());
 
 const App = ({ Component, pageProps }: AppProps) => (
     <>
