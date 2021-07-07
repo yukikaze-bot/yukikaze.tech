@@ -31,6 +31,9 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typeof getStaticProps>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    const authenticated = globalThis?.window?.localStorage.getItem('discord_pack') !== null;
+
     return (
         <>
             <div className="fullscreen">
@@ -80,6 +83,37 @@ const Home = ({ guilds, users, channels, commands }: InferGetStaticPropsType<typ
                             >
                                 Download
                             </a>
+                            <a
+                                href="/invite"
+                                className="btn twitter-dropshadow animation hover"
+                                onClick={() => shell.open('https://yukikaze.tech/invite')}
+                            >
+                                Invite
+                            </a>
+                            <a
+                                href="/guilds"
+                                className="btn npm-dropshadow animation hover"
+                                onClick={() => shell.open('https://yukikaze.tech/guilds')}
+                            >
+                                Dashboard
+                            </a>
+                            {authenticated ? (
+                                <a
+                                    href="/oauth/logout"
+                                    className="btn gold-dropshadow animation hover"
+                                    onClick={() => shell.open('https://yukikaze.tech/oauth/logout')}
+                                >
+                                    Log Out
+                                </a>
+                            ) : (
+                                <a
+                                    href="/oauth/login"
+                                    className="btn gold-dropshadow animation hover"
+                                    onClick={() => shell.open('https://yukikaze.tech/oauth/login')}
+                                >
+                                    Login
+                                </a>
+                            )}
                             <a href="mailto:contact@yukikaze.tech" className="btn emerald-dropshadow animation hover">
                                 Email
                             </a>

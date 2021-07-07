@@ -2,3 +2,4 @@
 /discord     https://discord.gg/zGvtAnGhdP
 /download    https://github.com/yukikaze-bot/yukikaze.tech/releases
 /oauth/login https://discord.com/oauth2/authorize?redirect_uri=https://yukikaze.tech/oauth/callback&response_type=code&scope=identify%20guilds&client_id=855428383574589460
+/invite      https://discord.com/oauth2/authorize?client_id=855428383574589460&permissions=388160&redirect_uri=https://yukikaze.tech&response_type=code&scope=bot

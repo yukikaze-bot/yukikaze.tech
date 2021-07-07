@@ -4,6 +4,7 @@ import { apiFetch } from '../../utils/apiFetch';
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import type { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import { When } from 'react-if';
 import Error from 'next/error';
 
@@ -68,6 +69,7 @@ const GuildPage: NextPage = () => {
 
             <When condition={guild && authenticated}>
                 <Toaster position="bottom-right" />
+                <NextSeo title={`${guild!.name}`} />
 
                 <section className="paper-container">
                     <div className="ribbon"></div>

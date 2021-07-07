@@ -3,6 +3,7 @@
     "rules": {
         "react/jsx-filename-extension": "off",
         "@next/next/no-img-element": "off",
-        "spaced-comment": "off"
+        "spaced-comment": "off",
+        "@next/next/no-html-link-for-pages": "off"
     }
 }
