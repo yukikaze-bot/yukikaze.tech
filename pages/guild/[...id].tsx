@@ -69,7 +69,7 @@ const GuildPage: NextPage = () => {
 
             <When condition={guild && authenticated}>
                 <Toaster position="bottom-right" />
-                <NextSeo title={`${guild!.name}`} />
+                <NextSeo title={`${guild?.name ?? ''}`} />
 
                 <section className="paper-container">
                     <div className="ribbon"></div>
