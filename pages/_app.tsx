@@ -172,10 +172,10 @@ landscape)"
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="theme-color" content="#4a4a4a" />
             <meta name="robots" content="index, follow" />
-            <meta name="author" content="Yoshida Tomio" />
+            <meta name="author" content="Yukikaze" />
             <meta name="language" content="English" />
             <meta content="https://yukikaze.tech/profile.png" property="og:image" />
-            <meta content="Yoshida Tomio" property="og:title" />
+            <meta content="Yukikaze" property="og:title" />
 
             <meta content="Yukikaze's official website." property="og:description" />
             <meta content="Yukikaze's official website." name="description" />
