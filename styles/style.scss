@@ -1,24 +1,26 @@
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: rgb(52, 58, 64);
-}
+body {
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: rgb(52, 58, 64);
+    }
 
-body::-webkit-scrollbar {
-    width: 6px;
-    background-color: rgb(52, 58, 64);
-}
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: rgb(52, 58, 64);
+    }
 
-body::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 0, 0);
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(0, 0, 0);
+    }
 }
 
 a {
     color: rgb(83, 119, 129);
-}
 
-a:hover {
-    color: rgb(15, 160, 206);
+    &:hover {
+        color: rgb(15, 160, 206);
+    }
 }
 
 .fullscreen h1.title {
@@ -53,38 +55,38 @@ a:hover {
 
 .flex-grid {
     margin-top: 0.5em;
-}
 
-.flex-grid .colour {
-    flex-basis: 14.1%;
-    max-width: 14.1%;
-    position: relative;
-    height: 200px;
-    transition: transform 200ms ease-in-out;
-    z-index: 10;
-}
+    .colour {
+        flex-basis: 14.1%;
+        max-width: 14.1%;
+        position: relative;
+        height: 200px;
+        transition: transform 200ms ease-in-out;
+        z-index: 10;
 
-.flex-grid .colour:hover {
-    transform: translateY(-0.5em) scale(1.05);
-    transition: transform 200ms ease-in-out;
-    z-index: 10000;
-}
+        &:hover {
+            transform: translateY(-0.5em) scale(1.05);
+            transition: transform 200ms ease-in-out;
+            z-index: 10000;
+        }
 
-.flex-grid .colour .name,
-.flex-grid .colour .hex {
-    position: absolute;
-    font-size: 20px;
-    font-weight: bold;
-}
+        .name,
+        .hex {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-.flex-grid .colour .name {
-    left: 0.5em;
-    top: 0.25em;
-}
+        .name {
+            left: 0.5em;
+            top: 0.25em;
+        }
 
-.flex-grid .colour .hex {
-    bottom: 0.5em;
-    right: 0.5em;
+        .hex {
+            bottom: 0.5em;
+            right: 0.5em;
+        }
+    }
 }
 
 .image-preview {
@@ -94,7 +96,6 @@ a:hover {
     margin-top: 0.5em !important;
     max-width: 48% !important;
     position: relative;
-
     background-size: 20px 20px;
     background-position: 0 0, 30px 30px;
     background-image: linear-gradient(
@@ -106,27 +107,27 @@ a:hover {
             rgb(46, 48, 51)
         ),
         linear-gradient(45deg, rgb(46, 48, 51) 25%, transparent 0, transparent 75%, rgb(46, 48, 51) 0, rgb(46, 48, 51));
-}
 
-.image-preview img {
-    max-height: 250px;
-}
+    img {
+        max-height: 250px;
+    }
 
-.image-preview .image-links {
-    bottom: 0.5em;
-    font-size: 16px;
-    font-weight: bold;
-    position: absolute;
-    right: 0.5em;
-}
+    .image-links {
+        bottom: 0.5em;
+        font-size: 16px;
+        font-weight: bold;
+        position: absolute;
+        right: 0.5em;
+    }
 
-.image-preview .image-text {
-    font-size: 22px;
-    font-weight: bold;
-    left: 0.5em;
-    position: absolute;
-    top: 0.25em;
-    text-shadow: 0 0 5px rgb(0, 0, 0);
+    .image-text {
+        font-size: 22px;
+        font-weight: bold;
+        left: 0.5em;
+        position: absolute;
+        top: 0.25em;
+        text-shadow: 0 0 5px rgb(0, 0, 0);
+    }
 }
 
 .btn {
@@ -166,20 +167,24 @@ a:hover {
 }
 
 @media (max-width: 800px) {
-    .flex-grid .colour .name,
-    .flex-grid .colour .hex {
-        font-size: 16px;
+    .flex-grid .colour {
+        .name,
+        .hex {
+            font-size: 16px;
+        }
     }
 }
 
 @media (max-width: 600px) {
-    .flex-grid .colour,
-    .flex-grid .image-preview {
-        flex-basis: 90% !important;
-        max-width: 90% !important;
-        padding: 0;
-        width: 90%;
-        margin: 0 auto;
+    .flex-grid {
+        .colour,
+        .image-preview {
+            flex-basis: 90% !important;
+            max-width: 90% !important;
+            padding: 0;
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -187,6 +192,7 @@ a:hover {
     from {
         filter: hue-rotate(0deg);
     }
+
     to {
         filter: hue-rotate(360deg);
     }

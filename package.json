@@ -1,6 +1,6 @@
 {
     "name": "tomio.codes",
-    "version": "1.4.2",
+    "version": "1.5.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -30,7 +30,8 @@
         "react-hook-form": "^7.10.1",
         "react-hot-toast": "^2.0.0",
         "react-if": "^4.0.1",
-        "react-typist": "^2.0.5"
+        "react-typist": "^2.0.5",
+        "sass": "^1.35.2"
     },
     "devDependencies": {
         "@tauri-apps/cli": "^1.0.0-beta.3",
