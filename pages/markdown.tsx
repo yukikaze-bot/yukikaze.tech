@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable react/no-children-prop */
 
 import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { useQueryParam, StringParam } from 'use-query-params';
 import { Prism } from 'react-syntax-highlighter';
 import ReactMarkdown from 'react-markdown';
-import { useRouter } from 'next/router';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import type { NextPage } from 'next';
@@ -32,12 +31,7 @@ const components = {
 };
 
 const MarkdownPage: NextPage = () => {
-    const { query } = useRouter();
-    // @ts-expect-error
-    const md: string =
-        query.md ?? new URL(globalThis?.window?.location.href ?? 'https://yukikaze.tech').searchParams.get('md');
-
-    console.log(md);
+    const [md] = useQueryParam('md', StringParam);
 
     return (
         <>
@@ -45,12 +39,12 @@ const MarkdownPage: NextPage = () => {
 
             <When condition={typeof md === 'string'}>
                 <section className="paper-container">
-                    <div className="ribbon"></div>
+                    <div className="ribbonyo"></div>
                     <div className="paper">
                         <div className="markdown-jekyll">
                             <ReactMarkdown
                                 components={components}
-                                children={md}
+                                children={md!}
                                 remarkPlugins={[gfm, remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
                             />
