@@ -31,7 +31,6 @@ const components = {
 
 const MarkdownPage: NextPage = () => {
     const { query } = useRouter();
-    const markdown = decodeURIComponent(query.md as string);
 
     return (
         <>
@@ -44,7 +43,7 @@ const MarkdownPage: NextPage = () => {
                         <div className="markdown-jekyll">
                             <ReactMarkdown
                                 components={components}
-                                children={markdown}
+                                children={decodeURIComponent(query.md as string)}
                                 remarkPlugins={[gfm, remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
                             />
@@ -53,9 +52,9 @@ const MarkdownPage: NextPage = () => {
                 </section>
             </When>
 
-            <When condition={!query.md}>
+            <When condition={typeof query.md !== 'string'}>
                 <div>
-                    <Error statusCode={400} title="Bad Request." />
+                    <Error statusCode={400} title="Bad Request" />
                 </div>
             </When>
         </>
