@@ -1,7 +1,7 @@
 /* eslint-disable react/no-children-prop */
 
 import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { useQueryParam, StringParam } from 'use-query-params';
+import { useQueryParam } from 'use-query-params';
 import { Prism } from 'react-syntax-highlighter';
 import ReactMarkdown from 'react-markdown';
 import rehypeKatex from 'rehype-katex';
@@ -31,7 +31,7 @@ const components = {
 };
 
 const MarkdownPage: NextPage = () => {
-    const [md] = useQueryParam('md', StringParam);
+    const [md] = useQueryParam<string>('md');
 
     return (
         <>
@@ -44,7 +44,7 @@ const MarkdownPage: NextPage = () => {
                         <div className="markdown-jekyll">
                             <ReactMarkdown
                                 components={components}
-                                children={md!}
+                                children={md}
                                 remarkPlugins={[gfm, remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
                             />
