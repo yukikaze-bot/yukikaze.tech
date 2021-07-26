@@ -41,14 +41,14 @@ const MarkdownPage: NextPage = () => {
         <>
             <NextSeo title="Markdown Page" />
 
-            <When condition={!false}>
+            <When condition={typeof md === 'string'}>
                 <section className="paper-container">
                     <div className="ribbon"></div>
                     <div className="paper">
                         <div className="markdown-jekyll">
                             <ReactMarkdown
                                 components={components}
-                                children={'# hI'}
+                                children={md}
                                 remarkPlugins={[gfm, remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
                             />
