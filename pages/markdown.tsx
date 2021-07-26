@@ -1,7 +1,6 @@
 /* eslint-disable react/no-children-prop */
 
 import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { useQueryParam } from 'use-query-params';
 import { Prism } from 'react-syntax-highlighter';
 import ReactMarkdown from 'react-markdown';
 import rehypeKatex from 'rehype-katex';
@@ -31,7 +30,8 @@ const components = {
 };
 
 const MarkdownPage: NextPage = () => {
-    const [md] = useQueryParam<string>('md');
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    const md = new URLSearchParams(globalThis?.window?.location.search.slice(1) ?? 'md=Hi').get('md')!;
 
     console.log(md);
 
@@ -49,6 +49,7 @@ const MarkdownPage: NextPage = () => {
                                 children={md}
                                 remarkPlugins={[gfm, remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
+                                disallowedElements={['script']}
                             />
                         </div>
                     </div>
