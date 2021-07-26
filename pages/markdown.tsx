@@ -41,7 +41,7 @@ const MarkdownPage: NextPage = () => {
 
             <When condition={typeof md === 'string'}>
                 <section className="paper-container">
-                    <div className="ribbonyo"></div>
+                    <div className="ribbon"></div>
                     <div className="paper">
                         <div className="markdown-jekyll">
                             <ReactMarkdown
