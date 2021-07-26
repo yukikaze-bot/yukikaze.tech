@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable react/no-children-prop */
+
 import { dark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Prism } from 'react-syntax-highlighter';
 import ReactMarkdown from 'react-markdown';
@@ -32,7 +34,7 @@ const components = {
 const MarkdownPage: NextPage = () => {
     const { query } = useRouter();
     // @ts-expect-error
-    const md: string = query.md ?? new URL(window.location.href).searchParams.get('md');
+    const md: string = query.md ?? new URL(globalThis?.window?.location.href).searchParams.get('md');
 
     return (
         <>
