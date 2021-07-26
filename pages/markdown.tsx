@@ -34,7 +34,8 @@ const components = {
 const MarkdownPage: NextPage = () => {
     const { query } = useRouter();
     // @ts-expect-error
-    const md: string = query.md ?? new URL(globalThis?.window?.location.href).searchParams.get('md');
+    const md: string =
+        query.md ?? new URL(globalThis?.window?.location.href ?? 'https://yukikaze.tech').searchParams.get('md');
 
     return (
         <>
