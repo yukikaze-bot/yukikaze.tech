@@ -33,6 +33,8 @@ const components = {
 const MarkdownPage: NextPage = () => {
     const [md] = useQueryParam<string>('md');
 
+    console.log(md);
+
     return (
         <>
             <NextSeo title="Markdown Page" />
