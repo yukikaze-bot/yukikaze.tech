@@ -31,19 +31,21 @@ const components = {
 
 const MarkdownPage: NextPage = () => {
     const { query } = useRouter();
+    // @ts-expect-error
+    const md: string = query.md ?? new URL(window.location.href).searchParams.get('md');
 
     return (
         <>
             <NextSeo title="Markdown Page" />
 
-            <When condition={typeof query.md === 'string'}>
+            <When condition={typeof md === 'string'}>
                 <section className="paper-container">
                     <div className="ribbon"></div>
                     <div className="paper">
                         <div className="markdown-jekyll">
                             <ReactMarkdown
                                 components={components}
-                                children={decodeURIComponent(query.md as string)}
+                                children={decodeURIComponent(md)}
                                 remarkPlugins={[gfm, remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
                             />
@@ -52,7 +54,7 @@ const MarkdownPage: NextPage = () => {
                 </section>
             </When>
 
-            <When condition={typeof query.md !== 'string'}>
+            <When condition={typeof md !== 'string'}>
                 <div>
                     <Error statusCode={400} title="Bad Request" />
                 </div>
