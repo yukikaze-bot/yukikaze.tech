@@ -37,6 +37,8 @@ const MarkdownPage: NextPage = () => {
     const md: string =
         query.md ?? new URL(globalThis?.window?.location.href ?? 'https://yukikaze.tech').searchParams.get('md');
 
+    console.log(md);
+
     return (
         <>
             <NextSeo title="Markdown Page" />
